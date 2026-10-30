@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Crime Intel System – Login</title>
+  <link rel="stylesheet" href="css/login.css" />
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-box">
+      <div class="login-header">
+        <h2>🚔 Crime Intelligence System</h2>
+        <p>Nellore District Police</p>
+      </div>
+      <div class="login-form">
+        <input type="text" id="username" placeholder="Officer ID / Username" />
+        <input type="password" id="password" placeholder="Password" />
+        <button onclick="handleLogin()">Login</button>
+        <p id="error-msg" style="color:red; display:none;">Invalid credentials</p>
+      </div>
+    </div>
+  </div>
+  <script src="js/auth.js"></script>
+</body>
+</html>

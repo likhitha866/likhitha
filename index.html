@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Crime Heatmap – Nellore District</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- LEFT PANEL -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <h2>🚔 Crime Intel</h2>
+      <p>Nellore District</p>
+    </div>
+
+    <div class="filter-section">
+      <label>Sub Division</label>
+      <select id="subdivisionSelect" onchange="onSubdivisionChange()">
+        <option value="">-- Select Sub Division --</option>
+      </select>
+
+      <label>Area</label>
+      <select id="areaSelect" onchange="onAreaChange()">
+        <option value="">-- Select Area --</option>
+      </select>
+
+      <label>Offense Type</label>
+      <select id="offenseFilter" onchange="applyFilters()">
+        <option value="">All Offenses</option>
+        <option value="Theft">Theft</option>
+        <option value="Chain Snatching">Chain Snatching</option>
+        <option value="Fraud">Fraud</option>
+        <option value="Assault">Assault</option>
+        <option value="Drug Peddling">Drug Peddling</option>
+        <option value="Robbery">Robbery</option>
+        <option value="Land Dispute Violence">Land Dispute Violence</option>
+      </select>
+    </div>
+
+    <div class="stats-section" id="statsBox">
+      <p>📍 Select an area to view crime stats</p>
+    </div>
+
+    <div class="layer-toggle">
+      <label><input type="checkbox" id="toggleHeatmap" checked onchange="toggleHeatmapLayer()"> Show Heatmap</label>
+      <label><input type="checkbox" id="toggleMarkers" checked onchange="toggleMarkersLayer()"> Show Markers</label>
+    </div>
+  </div>
+
+  <!-- RIGHT MAP -->
+  <div id="map"></div>
+
+  <!-- SCRIPTS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
